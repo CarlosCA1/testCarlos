@@ -26,7 +26,7 @@ class CuentaCorrienteTest {
     void testSacarDinero(double saldoInicial, double cantidadARetirar, double saldoEsperado) {
         CuentaCorriente cuenta = new CuentaCorriente(saldoInicial, "Carlos", "1122", "35610495D");
         cuenta.sacarDinero(cantidadARetirar);
-        assertEquals(saldoEsperado, cuenta.getSaldo(), 0.01);
+        assertEquals(saldoEsperado, cuenta.getSaldo());
     }
 
     @Test
@@ -48,7 +48,7 @@ class CuentaCorrienteTest {
     void testIngresarDinero(double saldoInicial, double cantidadAIngresar, double saldoEsperado) {
         CuentaCorriente cuenta = new CuentaCorriente(saldoInicial, "Carlos", "1122", "35610495D");
         cuenta.ingresarDinero(cantidadAIngresar);
-        assertEquals(saldoEsperado, cuenta.getSaldo(), 0.01);
+        assertEquals(saldoEsperado, cuenta.getSaldo());
     }
 }
 
