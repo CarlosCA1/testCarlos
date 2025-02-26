@@ -66,20 +66,22 @@ public class CuentaCorriente {
         System.out.println("El NIF es incorrecto");
     }
 
-    public void sacarDinero(double cantidadARetirar) {
+    public double sacarDinero(double cantidadARetirar) {
         if (cantidadARetirar <= saldo) {
             saldo -= cantidadARetirar;
         } else {
             System.out.println("Saldo insuficiente");
         }
+        return saldo;
     }
 
-    public void ingresarDinero(double cantidadAIngresar) {
+    public double ingresarDinero(double cantidadAIngresar) {
         if (cantidadAIngresar > 0) {
             saldo += cantidadAIngresar;
         } else {
             System.out.println("Cantidad a ingresar no válida");
         }
+        return saldo;
     }
 
     public String mostrarInformacion(){
